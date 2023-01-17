@@ -15,8 +15,10 @@ int main()
 	scanf("%d",&eng);
 	total=math+sci+ss+hin+eng;
 	per=total/5;
-	printf("total mark:%d",total);
-	printf("\npercentage:%f",per);
+	if(math>=33&&sci>=33&&ss>=33&&hin>=33&&eng>=33)
+	{
+		printf("total mark:%d",total);
+		printf("\npercentage:%f",per);
 	if(per>75)
 	{
 		printf("distinction");
@@ -24,15 +26,16 @@ int main()
 	else if ((per>60)&&(per<=75))
 	{
 		printf("\nfirst class");
-    }
-    else if((per>50)&&(per<=60))
-    {
-    	printf("\nsecond class");
+    	}
+    	else if((per>50)&&(per<=60))
+    	{
+    		printf("\nsecond class");
 	}
 	else if ((per>35)&&(per<=50))
 	{
 		printf("\npass class");
 	}
+	}	
     else 
     {
     	printf("\nfail");
