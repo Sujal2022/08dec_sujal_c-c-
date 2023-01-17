@@ -39,6 +39,6 @@ int main()
     else 
     {
     	printf("\nfail");
-	}
+    }
 	return 0;
 }
