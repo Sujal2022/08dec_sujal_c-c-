@@ -38,11 +38,11 @@ void bank::withdraw()
 }
 void bank::Show()
 {
-	cout<<"-------account detail--------"<<endl;
-        cout<<" Account No. : "<<acno;
-        cout<<" Name : "<<acno;
-        cout<<" Account Type : "<<actp;
-        cout<<" Balance : "<<bal;	
+	cout<<"-------ACCOUNT DETAIL--------"<<endl;
+        cout<<" Account No. : "<<acno<<endl;
+        cout<<" Name : "<<acno<<endl;
+        cout<<" Account Type : "<<actp<<endl;
+        cout<<" Balance : "<<bal<<endl;	
 }
 int main()
 {
