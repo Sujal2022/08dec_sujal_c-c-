@@ -38,7 +38,7 @@ void bank::withdraw()
 }
 void bank::Show()
 {
-	cout<<"-------ACCOUNT DETAIL--------"<<endl;
+	cout<<"-*-*-*-*-*-*ACCOUNT DETAIL*-*-*-*-*-*-"<<endl;
         cout<<" Account No. : "<<acno<<endl;
         cout<<" Name : "<<acno<<endl;
         cout<<" Account Type : "<<actp<<endl;
@@ -47,9 +47,11 @@ void bank::Show()
 int main()
 {
 	 int acno;
+	 int choice;
+	 	
         char acnm[100], actp[100];
         float Bal;
-        cout<<" Enter Details: "<<endl;
+        cout<<" -*-*-*-*-*-* Enter Details *-*-*-*-*-*- "<<endl;
         cout<<"1. Account No.: "<<endl;
         cin>>acno;
         cout<<"2. Name : "<<endl;
@@ -58,10 +60,27 @@ int main()
         cin>>actp;
         cout<<"4. Balance : "<<endl;
         cin>>Bal;
-  
-        bank s1(acno, acnm, actp, Bal);  
-        s1.deposit(); 
-        s1.withdraw(); 
+        bank s1(acno, acnm, actp, Bal);
+        
+        cout<<"\n1. DEOPSIT AMOUNT.";
+	 	cout<<"\n2. WITHDRAWN AMOUNT.";
+	 	cout<<"\nEnter your choice:";
+	 	cin>>choice;	 	
+	 	switch(choice)
+	 	{
+			case 1:
+				s1.deposit(); 
+				break;
+				
+			case 2:
+				s1.withdraw();
+				break;
+			default:
+			cout<<"\nplease enter valid choice.";
+			break;		
+		}
+		  
         s1.Show();
+
         return 0;
 }
